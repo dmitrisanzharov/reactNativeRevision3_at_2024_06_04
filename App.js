@@ -5,7 +5,8 @@ export default function App() {
   console.log('lalalalalala');
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text style={{...styles.text('yo'), fontWeight: 'bold'}}>Open up App.js to start working on your app!</Text>
+      <View style={{height: 1, backgroundColor: 'black', alignSelf: 'stretch'}} />
       <StatusBar style="auto" />
     </View>
   );
@@ -18,4 +19,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  text: (arg1) => {
+    if(arg1 === 'yo1'){
+      return {color: 'red'}
+    } else {
+      return {color: 'green'}
+    }
+  }
 });
